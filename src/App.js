@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { HashRouter } from "react-router-dom";
 import "./App.css";
-import axios from "axios";
+import AppRoutes from "./AppRoutes";
+import Layout from "./views/Layout/Layout/layout";
 
 function App() {
-  const [respo, setResponse] = useState([]);
-
-  useEffect(() => {
-    axios.get("/api/v1/connect-server").then((res) => {
-      console.log(res);
-      const response = res.data;
-      setResponse(response.body);
-    });
-  }, []);
-  return <div className="App">sdd{respo}</div>;
+  return (
+    <HashRouter>
+      <React.Suspense>
+        <AppRoutes />
+      </React.Suspense>
+    </HashRouter>
+  );
 }
 
 export default App;
