@@ -13,8 +13,9 @@ import {
 } from "reactstrap";
 import axios from "axios";
 import { server } from "../config/server";
+import metaRoutes from "../metaRoutes";
 
-const Login = () => {
+const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -34,7 +35,7 @@ const Login = () => {
       .post("http://localhost:8000/api/v1/user/login", body)
       .then((res) => {
         if (res.data.success) {
-          window.alert("logged in successfully");
+          props.history.push(metaRoutes.product);
         }
         console.log(res);
       })

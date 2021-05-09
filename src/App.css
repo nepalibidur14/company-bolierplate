@@ -1,0 +1,35 @@
+body {
+  font-family: "Muli", sans-serif;
+}
+
+.Logo {
+  height: 80px;
+  width: 170px;
+}
+
+.navs:hover {
+  color: blueviolet;
+  border-bottom: 2px solid grey;
+}
+.navs {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  position: relative;
+  display: inline-block;
+}
+
+.mainImg {
+  opacity: 0.6;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+}
+
+footer a {
+  color: #d5d5d5;
+}
