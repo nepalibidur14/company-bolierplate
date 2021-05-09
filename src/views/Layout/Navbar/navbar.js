@@ -7,7 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Col,
   Container,
 } from "reactstrap";
 import { Link } from "react-scroll";
@@ -46,7 +45,7 @@ const Heading = (props) => {
             <img src="./myCompany.jpeg" alt="navbar imgs" height="60" />
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
+          <Collapse isOpen={isOpen} navbar className="justify-content-end">
             <Nav className="ml-auto " navbar>
               <NavItem className="nav-item">
                 <NavLink href="#main" className="text-dark text-weight-bolder ">

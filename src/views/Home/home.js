@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import General from "../General";
 import ProductComponent from "../Products/product";
 import About from "../About/about";

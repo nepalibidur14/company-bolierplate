@@ -46,12 +46,12 @@ const Login = (props) => {
   };
   return (
     <Container>
-      <Card className="shadow w-50 ">
-        <CardHeader>Login here</CardHeader>
+      <Card className="shadow w-50 m-5">
+        <CardHeader className="h4">Login here</CardHeader>
         <Form onSubmit={handleSubmit}>
           <CardBody>
-            <FormGroup>
-              <Label>Username</Label>
+            <FormGroup className="m-2">
+              <Label className="h5">Username</Label>
               <Input
                 type="text"
                 name="username"
@@ -60,8 +60,8 @@ const Login = (props) => {
                 onChange={handleChange}
               />
             </FormGroup>
-            <FormGroup>
-              <Label>Password</Label>
+            <FormGroup className="m-2">
+              <Label className="h5">Password</Label>
               <Input
                 type="password"
                 name="password"
@@ -71,8 +71,10 @@ const Login = (props) => {
               />
             </FormGroup>
           </CardBody>
-          <CardFooter>
-            <Button>Submit</Button>
+          <CardFooter className="d-flex justify-content-end">
+            <Button color="info" className="text-white">
+              Submit
+            </Button>
           </CardFooter>
         </Form>
       </Card>

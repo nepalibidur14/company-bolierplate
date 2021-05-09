@@ -10,19 +10,25 @@ const Contact = () => {
           <Col md={3}>
             <a href="https://www.facebook.com/" target="_blank">
               <i
-                class="fa fa-facebook-square fa-4x text-info"
+                className="fa fa-facebook-square fa-4x text-info"
                 aria-hidden="true"
               ></i>
             </a>
           </Col>
           <Col md={3}>
             <a href="https://www.instagram.com/" target="_blank">
-              <i class="fa fa-instagram fa-4x text-info" aria-hidden="true"></i>
+              <i
+                className="fa fa-instagram fa-4x text-info"
+                aria-hidden="true"
+              ></i>
             </a>
           </Col>
           <Col md={3}>
             <a href="https://twitter.com/?lang=en" target="_blank">
-              <i class="fa fa-twitter fa-4x text-info" aria-hidden="true"></i>
+              <i
+                className="fa fa-twitter fa-4x text-info"
+                aria-hidden="true"
+              ></i>
             </a>
           </Col>
         </Row>

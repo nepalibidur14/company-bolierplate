@@ -23,6 +23,7 @@ const AppRoutes = () => {
         name="Admin"
         render={(props) => <Dashboard {...props} />}
       />
+      <Redirect from="/" to="/public" />
       <Redirect from="*/*" to="/" />
     </Switch>
   );
