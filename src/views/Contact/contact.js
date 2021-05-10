@@ -3,7 +3,7 @@ import { Col, Row, Container } from "reactstrap";
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id="contact">
       <h2>Contact Us</h2>
       <div className="m-5">
         <Row className="text-center">

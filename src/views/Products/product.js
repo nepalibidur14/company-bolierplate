@@ -18,6 +18,7 @@ const ProductComponent = () => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+
   const Product = ({ product }) => {
     let productName = product.productName
       ? product.productName.toUpperCase()
@@ -40,7 +41,7 @@ const ProductComponent = () => {
         </Modal>
         <Card className="mt-1 shadow">
           <CardBody>
-            <img src={product.file} height="100px" />
+            <img src={product.file} height="80px" className="productImg" />
             <p className="h5">{product.productName}</p>
             <div className="d-flex justify-content-end">
               <Button
@@ -49,7 +50,7 @@ const ProductComponent = () => {
                 onClick={toggle}
                 className="text-primary"
               >
-                ...View
+                View
               </Button>
             </div>
           </CardBody>
@@ -71,11 +72,13 @@ const ProductComponent = () => {
         <h2 className="text-left pt-5">Our Products</h2>
 
         <div className="row py-5">
-          {products.map((product) => (
-            <Col md={3}>
-              <Product product={product} />
-            </Col>
-          ))}
+          {products.map((product) => {
+            return (
+              <Col md={3}>
+                <Product product={product} />
+              </Col>
+            );
+          })}
         </div>
       </div>
     </div>
