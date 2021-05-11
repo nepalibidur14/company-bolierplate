@@ -13,7 +13,7 @@ import {
   CardFooter,
 } from "reactstrap";
 import metaRoutes from "../../metaRoutes";
-import server from "../../config/server";
+import { server } from "../../config/server";
 
 const AddProduct = (props) => {
   const [name, setName] = useState("");
@@ -29,13 +29,11 @@ const AddProduct = (props) => {
     data.append("description", description);
     data.append("file", selectedFiles);
 
-    await axios
-      .post("http://localhost:8000/api/v1/products", data)
-      .then((res) => {
-        if (res.data.success) {
-          props.history.push(metaRoutes.product);
-        }
-      });
+    await server.post("/products", data).then((res) => {
+      if (res.data.success) {
+        props.history.push(metaRoutes.product);
+      }
+    });
   };
 
   const handleChange = (e) => {

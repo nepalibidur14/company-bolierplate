@@ -10,7 +10,7 @@ import {
   ModalFooter,
   Button,
 } from "reactstrap";
-import axios from "axios";
+import { server } from "../../admin/config/server";
 
 const ProductComponent = () => {
   const [products, setProducts] = useState([]);
@@ -60,7 +60,7 @@ const ProductComponent = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/v1/products").then((item) => {
+    server.get("/products").then((item) => {
       console.log(item);
       setProducts(item.data.data);
     });

@@ -31,8 +31,8 @@ const Login = (props) => {
       username: username,
       password: password,
     };
-    await axios
-      .post("http://localhost:8000/api/v1/user/login", body)
+    await server
+      .post("/user/login", body)
       .then((res) => {
         if (res.data.success) {
           props.history.push(metaRoutes.product);

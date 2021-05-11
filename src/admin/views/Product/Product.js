@@ -9,13 +9,13 @@ import {
   Col,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import { server } from "../../config/server";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/v1/products").then((item) => {
+    server.get("/products").then((item) => {
       console.log(item);
       setProducts(item.data.data);
     });
